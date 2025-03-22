@@ -1,5 +1,4 @@
-Timestamp,aX (g),aY (g),aZ (g),Temp (C),gX (°/s),gY (°/s),gZ (°/s)
-Timestamp,aX (g),aY (g),aZ (g),Temp (C),gX (°/s),gY (°/s),gZ (°/s)
+Timestamp,aX (g),aY (g),aZ (g),Temp (C),gX (ï¿½/s),gY (ï¿½/s),gZ (ï¿½/s)
 27,0.07,-0.00,-0.95,28.95,1.29,0.99,1.07
 173,0.08,0.01,-0.94,28.81,1.31,0.92,1.15
 277,0.07,0.00,-0.96,28.95,1.46,1.03,0.94

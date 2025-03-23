@@ -6,8 +6,8 @@ int16_t accelerometer_x, accelerometer_y, accelerometer_z;
 int16_t gyro_x, gyro_y, gyro_z;
 int16_t temperature;
 
-const float ACCEL_SCALE = 16384.0;  // For ±2g range
-const float GYRO_SCALE = 131.0;      // For ±250°/s range
+const float ACCEL_SCALE = 1.0;  // For ±2g range
+const float GYRO_SCALE = 1.0;      // For ±250°/s range
 
 char tmp_str[7];
 

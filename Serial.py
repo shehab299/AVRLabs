@@ -15,7 +15,7 @@ axis = sys.argv[1]
 # Set up the serial connection (adjust the COM port accordingly)
 # On Windows, the port is typically something like "COM3"
 # On macOS or Linux, it might be something like "/dev/ttyUSB0" or "/dev/ttyACM0"
-arduino = serial.Serial('COM9', 9600)  # Replace with your Arduino port
+arduino = serial.Serial('COM10', 9600)  # Replace with your Arduino port
 time.sleep(2)  # Give the connection time to establish
 
 # Open the CSV file based on the axis argument (it only affects the filename)

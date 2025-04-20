@@ -6,9 +6,8 @@ int16_t accelerometer_x, accelerometer_y, accelerometer_z;
 int16_t gyro_x, gyro_y, gyro_z;
 int16_t temperature;
 
-const float ACCEL_SCALE = 1.0;  // For ±2g range
-const float GYRO_SCALE = 1.0;      // For ±250°/s range
-
+const float ACCEL_SCALE = 16384.0;  // For ±2g range
+const float GYRO_SCALE = 131.0;      // For ±250°/s range
 char tmp_str[7];
 
 // Convert int16_t to string with fixed length
@@ -71,11 +70,11 @@ void printSensorData() {
     Serial.print(",");  // Comma separator
 
     // Accelerometer data (scaled)
-    Serial.print(accelerometer_x / ACCEL_SCALE);
+    Serial.print(accelerometer_x * 9.81 / ACCEL_SCALE);
     Serial.print(",");
-    Serial.print(accelerometer_y / ACCEL_SCALE);
+    Serial.print(accelerometer_y * 9.81 / ACCEL_SCALE);
     Serial.print(",");
-    Serial.print(accelerometer_z / ACCEL_SCALE);
+    Serial.print(accelerometer_z * 9.81 / ACCEL_SCALE);
     Serial.print(",");
 
     // Temperature data (scaled)

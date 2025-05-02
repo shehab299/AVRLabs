@@ -4,11 +4,11 @@
 #include <avr/io.h>
 
 enum PRESCALER {
-    PRESCALER_1,
-    PRESCALER_8,
-    PRESCALER_64,
-    PRESCALER_256,
-    PRESCALER_1024
+    PRESCALER_1 = 1,
+    PRESCALER_8 = 8,
+    PRESCALER_64 = 64,
+    PRESCALER_256 = 256,
+    PRESCALER_1024 = 1024
 };
 // Set a bit/bits
 #define SET_BIT(REG, BIT) ((REG) |= (1 << (BIT)))

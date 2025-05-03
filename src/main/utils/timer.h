@@ -21,7 +21,7 @@ void computeTicks(int delay, int &overflow, int &ticks)
 public:
     static volatile int overflowCount;
 
-    Timer(int F_CPU = 16000000, int prescaler = PRESCALER_1)
+    Timer(int F_CPU = 16000000, int prescaler = PRESCALER_8)
         : F_CPU(F_CPU), prescaler(prescaler)
     {
         switch (prescaler)

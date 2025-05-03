@@ -29,20 +29,24 @@ enum PRESCALER {
 #define READ_BIT(REG, BIT) ((REG) & (1 << (BIT)))
 
 // Set bit using pointer to volatile register
-static inline void set_bit_ptr(volatile uint8_t* reg, uint8_t bit) {
+static inline void set_bit_ptr(volatile uint8_t *reg, uint8_t bit)
+{
     *reg |= (1 << bit);
 }
 
-static inline void clear_bit_ptr(volatile uint8_t* reg, uint8_t bit) {
+static inline void clear_bit_ptr(volatile uint8_t *reg, uint8_t bit)
+{
     *reg &= ~(1 << bit);
 }
 
-
-static inline void clear_bits_ptr(volatile uint8_t* reg, uint8_t bits) {
+static inline void clear_bits_ptr(volatile uint8_t *reg, uint8_t bits)
+{
     *reg &= ~(bits);
+}
 
-static inline void toggle_bit_ptr(volatile uint8_t* reg, uint8_t bit) {
+static inline void toggle_bit_ptr(volatile uint8_t *reg, uint8_t bit)
+{
     *reg ^= (1 << bit);
 }
 
-#endif 
+#endif

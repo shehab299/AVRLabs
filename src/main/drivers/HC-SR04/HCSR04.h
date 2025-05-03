@@ -6,8 +6,6 @@
 
 #define F_CPU 16000000
 #define SOUND_SPEED 34300.0f
-#define TRIG_PIN PB0
-#define ECHO_PIN PB1
 
 class HCSR04
 {
@@ -17,7 +15,7 @@ private:
     int triggerPin, echoPin;
 
 public:
-    HCSR04(int triggerPin = TRIG_PIN, int echoPin = ECHO_PIN, PRESCALER prescaler = PRESCALER_1)
+    HCSR04(int triggerPin , int echoPin, PRESCALER prescaler = PRESCALER_8)
         : triggerPin(triggerPin), echoPin(echoPin), prescaler(prescaler)
     {
         SET_BIT(DDRB, triggerPin);
